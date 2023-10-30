@@ -52,6 +52,7 @@ def portfolio_strategy_execution(strategy_function, rebalancing_dates, close_df)
 
 # 5. 성과 평가 지표 함수 정의하기
 def performance_metrics(portfolio_values, rebalancing_dates):
+    portfolio_values = [value for value in portfolio_values if value > 0]  # 0인 값 제거
     daily_returns = [0] + [(portfolio_values[i] - portfolio_values[i-1]) / portfolio_values[i-1] for i in range(1, len(portfolio_values))]
     cagr = ((portfolio_values[-1] / portfolio_values[0]) ** (1/len(rebalancing_dates))) - 1
     rolling_max = np.maximum.accumulate(portfolio_values)
