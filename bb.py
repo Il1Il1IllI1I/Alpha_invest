@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # 2. 데이터 로드하기
-close_df = pd.read_csv('close_df.csv')
+close_df = pd.read_csv('reshape_df.csv')
 max_date = close_df['Date'].max()
 
 # 3. 필요한 설정 값을 초기화하기

@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # 데이터 로드하기
-close_df = pd.read_csv('close_df.csv')
+close_df = pd.read_csv('reshape_df.csv')
 
 # 데이터셋 내의 최신 날짜를 구하기
 max_date = close_df['Date'].max()
